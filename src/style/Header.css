@@ -1,0 +1,77 @@
+/*Header- Navigation bar*/
+
+.responsive-header{
+    position: sticky;
+    top: 0px;
+    background-color: #60b4df;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container{
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+/*Logo area*/
+.logo-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+}
+
+.navbar-logo {
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.navbar-logo .site-name {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    min-width: 10rem;
+}
+
+/*Menu area*/
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
+/*Login area*/
+.log-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.log-sign .btn{
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: 1rem;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    transition: .3s;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-width: 8rem;
+    text-align: center;
+}
+
+.btn.solid, .btn.transparent:hover{
+    background-color: #fff;
+    color: #69bde7;
+}
+
+.btn.transparent, .btn.solid:hover{
+    background-color: transparent;
+    color: #fff;
+}
