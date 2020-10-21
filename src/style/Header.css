@@ -96,6 +96,59 @@
     padding-left: .2rem;
 }
 
+/*Child menu*/
+.nav-dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 10rem;
+    width: 100%;
+    opacity: 0;
+}
+
+.nav-dropdown ul{
+    position: relative;
+}
+
+.nav-dropdown.child-dropdown{
+    top: 0;
+    left: 100%;
+    cursor: pointer;
+}
+
+/*TODO Need to change when using react state*/
+.first-nav:hover > .nav-dropdown,
+.child-nav:hover > .nav-dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.child-nav{
+    position: relative;
+}
+
+.child-nav > a{
+    display: flex;
+    background-color: #fff;
+    color: #3498db;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s;
+    height: 4rem;
+}
+
+.child-nav:hover > a{
+    background-color: #3498db;
+    color: #fff;
+}
+
+.child-nav i{
+    transform: rotate(-90deg);
+}
+
 /*Login area*/
 .log-sign {
     display: flex;

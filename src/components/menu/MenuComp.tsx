@@ -12,7 +12,7 @@ function MenuComp(props) {
                             <i className="fa fa-caret-down" aria-hidden="true"></i>
                         </label>
                     </a>
-                    <div className="nav-dropdown expanded">
+                    <div className="nav-dropdown">
                         <ul className="sub-menu">
                             <li className="child-nav"><a href="/programming/front-end"> Front-end </a></li>
                             <li className="child-nav menu-has-sub">
@@ -22,7 +22,7 @@ function MenuComp(props) {
                                         <i className="fa fa-caret-down" aria-hidden="true"></i>
                                     </label>
                                 </a>
-                                <div className="nav-dropdown child-dropdown expanded">
+                                <div className="nav-dropdown child-dropdown">
                                     <ul className="sub-menu">
                                         <li className="child-nav"><a href="/programming/back-end/java"> Java </a></li>
                                         <li className="child-nav"><a href="/programming/back-end/spring"> Spring </a></li>
@@ -32,14 +32,14 @@ function MenuComp(props) {
                     </div>
                 </li>
                 <li className="first-nav"><a href="/travel">Travel </a></li>
-                <li className="first-nav">
+                <li className="first-nav menu-has-sub">
                     <input type="checkbox" id="menu-check1.4" />
                     <a href="/life">Life
                         <label title="toggle menu" htmlFor="menu-check1.4">
                             <i className="fa fa-caret-down" aria-hidden="true"></i>
                         </label>
                     </a>
-                    <div className="nav-dropdown expanded">
+                    <div className="nav-dropdown">
                         <ul className="sub-menu">
                             <li className="child-nav menu-has-sub">
                                 <input type="checkbox" id="menu-check2.4" />
@@ -48,7 +48,7 @@ function MenuComp(props) {
                                         <i className="fa fa-caret-down" aria-hidden="true"></i>
                                     </label>
                                 </a>
-                                <div className="nav-dropdown child-dropdown expanded">
+                                <div className="nav-dropdown child-dropdown">
                                     <ul className="sub-menu">
                                         <li className="child-nav"><a href="/life/cooking/food"> Food </a></li>
                                         <li className="child-nav"><a href="/life/cooking/drink"> Drink </a></li>
@@ -61,7 +61,7 @@ function MenuComp(props) {
                         </ul>
                     </div>
                 </li>
-                <li className="first-nav menu-has-sub"><a href="/">About </a></li>
+                <li className="first-nav"><a href="/">About </a></li>
             </ul>
         </div>
 );
