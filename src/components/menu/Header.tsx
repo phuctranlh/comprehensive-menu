@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import '../../style/Header.css';
 import {Link} from "react-router-dom";
+import MenuComp from "./MenuComp";
 
 function Header(props) {
 
@@ -17,7 +18,7 @@ function Header(props) {
                     </div>
                     <div className="nav-btn">
 
-
+                        <MenuComp></MenuComp>
                         <div className="log-sign">
                             <a href="#" className="btn transparent">Sign in</a>
                             <a href="#" className="btn solid">Sign up</a>

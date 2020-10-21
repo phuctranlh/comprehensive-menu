@@ -1,6 +1,6 @@
 /*Header- Navigation bar*/
 
-.responsive-header{
+.responsive-header {
     position: sticky;
     top: 0px;
     background-color: #60b4df;
@@ -8,7 +8,7 @@
     z-index: 1000;
 }
 
-.header-container{
+.header-container {
     padding: 0 2rem;
     margin: 0 auto;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 /*Logo area*/
-.logo-container{
+.logo-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -38,20 +38,73 @@
 }
 
 /*Menu area*/
+.header-container ul{
+    list-style: none;
+    height: 100%;
+}
+
+.header-container ul a{
+    text-decoration: none;
+}
+
 .nav-btn{
     flex: 3;
     display: flex;
 }
 
+.nav-links > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-nav {
+    position: relative;
+}
+
+.first-nav > a {
+    line-height: 6rem;
+    color: #fff;
+    padding: 0 1.2rem;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .6s;
+}
+
+.first-nav > a > i {
+    margin-left: .2rem;
+}
+
+.first-nav:hover > a {
+    color: yellow;
+}
+
+.menu-has-sub input[type=checkbox] {
+    z-index: 90001;
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 45%;
+    right: 1.1rem;
+}
+
+.menu-has-sub > a > label > i {
+    padding-left: .2rem;
+}
+
 /*Login area*/
-.log-sign{
+.log-sign {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
-.log-sign .btn{
+.log-sign .btn {
     display: inline-block;
     padding: .5rem 1.3rem;
     font-size: 1rem;
@@ -66,12 +119,12 @@
     text-align: center;
 }
 
-.btn.solid, .btn.transparent:hover{
+.btn.solid, .btn.transparent:hover {
     background-color: #fff;
     color: #69bde7;
 }
 
-.btn.transparent, .btn.solid:hover{
+.btn.transparent, .btn.solid:hover {
     background-color: transparent;
     color: #fff;
 }
