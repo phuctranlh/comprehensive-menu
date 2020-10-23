@@ -25,6 +25,7 @@ function Header(props) {
                         </div>
                     </div>
 
+                    {/*Menu for responsive screen*/}
                     <div className="hamburger-menu-container">
                         <div className="hamburger-menu">
                             <div></div>

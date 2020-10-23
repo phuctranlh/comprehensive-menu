@@ -47,10 +47,6 @@
     text-decoration: none;
 }
 
-.nav-btn{
-    flex: 3;
-    display: flex;
-}
 
 .nav-links > ul {
     display: flex;
@@ -130,8 +126,8 @@
 
 .child-nav > a{
     display: flex;
-    background-color: #fff;
-    color: #3498db;
+    background-color: #3498db;
+    color: #fff;
     padding: .5rem 1rem;
     font-size: 1rem;
     align-items: center;
@@ -141,7 +137,7 @@
 }
 
 .child-nav:hover > a{
-    background-color: #3498db;
+    background-color: #69bde7;
     color: #fff;
 }
 
@@ -150,6 +146,12 @@
 }
 
 /*Login area*/
+
+.nav-btn{
+    flex: 3;
+    display: flex;
+}
+
 .log-sign {
     display: flex;
     justify-content: center;
