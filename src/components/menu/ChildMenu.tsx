@@ -27,6 +27,10 @@ function ChildMenu(props) {
         }
     }
 
+    const closeMenu = (evt, lk) => {
+        setDropdown(false);
+    }
+
     //Handle menu without link
     let n_link = link;
     if (!link || typeof link !== 'string') {
@@ -50,7 +54,9 @@ function ChildMenu(props) {
         <>
             <li key={gen_key} className={classN}
                 onMouseEnter={(event) => hoverMenu(event, n_link)}
-                onMouseLeave={(event) => leaveMenu(event, n_link)}>
+                onMouseLeave={(event) => leaveMenu(event, n_link)}
+                onClick={(event) => closeMenu(event, n_link)}>
+
                 {isExpandable ? <input type="checkbox" id={'menu-check' + level + '.' + gen_key}>
                 </input> : null
                 }
