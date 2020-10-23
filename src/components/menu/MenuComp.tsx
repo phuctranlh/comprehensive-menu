@@ -15,7 +15,7 @@ function MenuComp(props) {
                 ))}
             </ul>
         </div>
-);
+    );
 }
 
 export default MenuComp;

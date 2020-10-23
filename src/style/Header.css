@@ -38,12 +38,12 @@
 }
 
 /*Menu area*/
-.header-container ul{
+.header-container ul {
     list-style: none;
     height: 100%;
 }
 
-.header-container ul a{
+.header-container ul a {
     text-decoration: none;
 }
 
@@ -93,7 +93,7 @@
 }
 
 /*Child menu*/
-.nav-dropdown{
+.nav-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -102,11 +102,11 @@
     opacity: 0;
 }
 
-.nav-dropdown ul{
+.nav-dropdown ul {
     position: relative;
 }
 
-.nav-dropdown.child-dropdown{
+.nav-dropdown.child-dropdown {
     top: 0;
     left: 100%;
     cursor: pointer;
@@ -114,17 +114,17 @@
 
 /*TODO Need to change when using react state*/
 .first-nav:hover > .nav-dropdown,
-.child-nav:hover > .nav-dropdown{
+.child-nav:hover > .nav-dropdown {
     transform: translate(0, 0);
     opacity: 1;
     pointer-events: auto;
 }
 
-.child-nav{
+.child-nav {
     position: relative;
 }
 
-.child-nav > a{
+.child-nav > a {
     display: flex;
     background-color: #3498db;
     color: #fff;
@@ -136,18 +136,18 @@
     height: 4rem;
 }
 
-.child-nav:hover > a{
+.child-nav:hover > a {
     background-color: #69bde7;
     color: #fff;
 }
 
-.child-nav i{
+.child-nav i {
     transform: rotate(-90deg);
 }
 
 /*Login area*/
 
-.nav-btn{
+.nav-btn {
     flex: 3;
     display: flex;
 }

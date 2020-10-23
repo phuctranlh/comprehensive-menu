@@ -7,7 +7,7 @@ function BoundChildMenu(props) {
     const {sub_items} = props;
 
     let classN = 'nav-dropdown';
-    if(props.level > 0) {
+    if (props.level > 0) {
         classN += ' child-dropdown';
     }
 
@@ -18,7 +18,7 @@ function BoundChildMenu(props) {
                     {sub_items.map((item, index) => (
                         <ChildMenu {...item} key={index}
                                    gen_key={index}
-                                    level={props.level + 1}>
+                                   level={props.level + 1}>
                         </ChildMenu>
                     ))}
                 </ul>
