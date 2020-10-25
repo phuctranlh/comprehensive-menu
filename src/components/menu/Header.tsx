@@ -5,6 +5,16 @@ import MenuComp from "./MenuComp";
 
 function Header(props) {
 
+    const [mobiMenu, setMobiMenu] = useState( false) ;
+
+    const setMobileMenu = (stt) => {
+        setMobiMenu(stt);
+    }
+
+    const clickMobileMenu = () => {
+        setMobiMenu(!mobiMenu);
+    }
+
     return (
         <>
             <div className={'responsive-header'}>
@@ -16,19 +26,21 @@ function Header(props) {
                             <i className={'fa fa-adjust'}></i>
                         </Link>
                     </div>
-                    <div className="nav-btn">
-
-                        <MenuComp></MenuComp>
-                        <div className="log-sign">
-                            <a href="#" className="btn transparent">Sign in</a>
-                            <a href="#" className="btn solid">Sign up</a>
+                    {
+                        (mobiMenu || window.innerWidth >= 960) && <div className="nav-btn">
+                            <MenuComp></MenuComp>
+                            <div className="log-sign">
+                                <a href="#" className="btn transparent">Sign in</a>
+                                <a href="#" className="btn solid">Sign up</a>
+                            </div>
                         </div>
-                    </div>
+                    }
 
                     {/*Menu for responsive screen*/}
                     <div className="hamburger-menu-container">
-                        <div className="hamburger-menu">
-                            <div></div>
+                        <div className="hamburger-menu"
+                             onClick={clickMobileMenu}>
+                            {mobiMenu ? <i className={'fa fa-times'}></i> : <i className={'fa fa-bars'}></i>}
                         </div>
                     </div>
                 </div>

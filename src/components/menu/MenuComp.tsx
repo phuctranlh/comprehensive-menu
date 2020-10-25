@@ -9,6 +9,7 @@ function MenuComp(props) {
                 {/*Init menu with first level*/}
                 {MenuData.map((item, index) => (
                     <ChildMenu {...item}
+                               key={index}
                                gen_key={index}
                                level={0}>
                     </ChildMenu>
