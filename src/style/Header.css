@@ -58,7 +58,7 @@
     position: relative;
 }
 
-.first-nav > a {
+.first-nav > div > a {
     line-height: 6rem;
     color: #fff;
     padding: 0 1.2rem;
@@ -70,11 +70,11 @@
     transition: .6s;
 }
 
-.first-nav > a > i {
+.first-nav > div > a > i {
     margin-left: .2rem;
 }
 
-.first-nav:hover > a {
+.first-nav:hover > div > a {
     color: yellow;
 }
 
@@ -88,7 +88,7 @@
     right: 1.1rem;
 }
 
-.menu-has-sub > a > label > i {
+.menu-has-sub > div > a > label > i {
     padding-left: .2rem;
 }
 
@@ -116,7 +116,7 @@
     position: relative;
 }
 
-.child-nav > a {
+.child-nav > div > a {
     display: flex;
     background-color: #3498db;
     color: #fff;
@@ -128,7 +128,7 @@
     height: 4rem;
 }
 
-.child-nav:hover > a {
+.child-nav:hover > div > a {
     background-color: #69bde7;
     color: #fff;
 }
@@ -185,7 +185,6 @@
 }
 
 
-
 @media (max-width: 960px) {
     .hamburger-menu-container {
         display: flex;
@@ -224,11 +223,12 @@
     }
 
     .menu-has-sub input[type=checkbox] {
-        width: 100%;
+        width: 4rem;
         height: 4rem;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
+        opacity: 0;
     }
 
     .first-nav {
@@ -237,14 +237,40 @@
         transform: translateY(15px);
     }
 
-    .first-nav > a {
+    .first-nav > div > a {
         line-height: 1;
-        padding: 1.6rem 2rem;
+        padding: 1.6rem 1rem;
     }
 
-    .first-nav:hover > a {
+    .first-nav:hover > div > a {
         transform: scale(1);
         background-color: #50a9d6;
+    }
+
+    .first-nav > input[type=checkbox] ~ div > .nav-dropdown,
+    .child-nav > input[type=checkbox] ~ div > .nav-dropdown {
+        position: initial;
+        top: initial;
+        left: initial;
+        transform: initial;
+        pointer-events: auto;
+        width: 100%;
+        padding: 0;
+        transition: visibility 0s, opacity 0s linear;
+        padding: 0 0 0 1rem;
+    }
+
+    .child-nav i {
+        transform: rotate(0deg);
+    }
+
+    .child-nav > div > a {
+        background-color: #69bde7;
+    }
+
+    .child-nav > div > a:hover {
+        background-color: #50a9d6;
+        color: yellow;
     }
 
     /*Login buttons*/

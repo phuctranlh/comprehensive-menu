@@ -18,7 +18,8 @@ function BoundChildMenu(props) {
                     {sub_items.map((item, index) => (
                         <ChildMenu {...item} key={index}
                                    gen_key={index}
-                                   level={props.level + 1}>
+                                   level={props.level + 1}
+                                   setMobileMenu={props.setMobileMenu}>
                         </ChildMenu>
                     ))}
                 </ul>

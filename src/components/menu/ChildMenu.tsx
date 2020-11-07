@@ -28,7 +28,24 @@ function ChildMenu(props) {
     }
 
     const closeMenu = (evt, lk) => {
-        setDropdown(false);
+        if (window.innerWidth >= 960) {
+            setDropdown(false);
+            // props.setMobileMenu(false);
+            //leaveMenu(evt, lk)
+        } else {
+            setDropdown(false);
+            props.setMobileMenu(false);
+        }
+    }
+
+    const handleLink = (evt, lk) => {
+        if (lk === '') {
+            setDropdown(!dropdown);
+        } else {
+            setDropdown(!dropdown);
+        }
+        // prevent bubbling
+        evt.stopPropagation();
     }
 
     //Handle menu without link
@@ -55,26 +72,33 @@ function ChildMenu(props) {
             <li key={gen_key} className={classN}
                 onMouseEnter={(event) => hoverMenu(event, n_link)}
                 onMouseLeave={(event) => leaveMenu(event, n_link)}
-                onClick={(event) => closeMenu(event, n_link)}>
+            >
 
-                {isExpandable ? <input type="checkbox" id={'menu-check' + level + '.' + gen_key}>
+                {isExpandable ? <input type="checkbox"
+                                       onClick={(event) => handleLink(event, n_link)}
+                                       id={'menu-check' + level + '.' + gen_key}>
                 </input> : null
                 }
-                <Link to={n_link}>
-                    {name}
-                    {isExpandable ? <label title="toggle menu" htmlFor={'menu-check' + level + '.' + gen_key}>
-                        <i className="fa fa-caret-down"></i>
-                    </label> : null}
+                {/*Put to a div to avoid using onClick of <li>*/}
+                <div onClick={(event) => closeMenu(event, n_link)}>
+                    <Link to={n_link}>
+                        {name}
+                        {isExpandable ? <label title="toggle menu" htmlFor={'menu-check' + level + '.' + gen_key}>
+                            <i className="fa fa-caret-down"></i>
+                        </label> : null}
 
 
-                </Link>
+                    </Link>
 
-                {dropdown && <BoundChildMenu sub_items={items}
-                                             level={level}
-                                             expand={isExpandable}>
-                </BoundChildMenu>
-                }
 
+                    {dropdown && <BoundChildMenu sub_items={items}
+                                                 level={level}
+                                                 expand={isExpandable}
+                                                 setMobileMenu={props.setMobileMenu}>
+                    </BoundChildMenu>
+
+                    }
+                </div>
             </li>
 
         </>

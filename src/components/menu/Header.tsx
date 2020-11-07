@@ -5,7 +5,7 @@ import MenuComp from "./MenuComp";
 
 function Header(props) {
 
-    const [mobiMenu, setMobiMenu] = useState( false) ;
+    const [mobiMenu, setMobiMenu] = useState(false);
 
     const setMobileMenu = (stt) => {
         setMobiMenu(stt);
@@ -26,9 +26,10 @@ function Header(props) {
                             <i className={'fa fa-adjust'}></i>
                         </Link>
                     </div>
+
                     {
                         (mobiMenu || window.innerWidth >= 960) && <div className="nav-btn">
-                            <MenuComp></MenuComp>
+                            <MenuComp setMobileMenu={setMobileMenu}></MenuComp>
                             <div className="log-sign">
                                 <a href="#" className="btn transparent">Sign in</a>
                                 <a href="#" className="btn solid">Sign up</a>

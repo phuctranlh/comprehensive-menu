@@ -11,7 +11,8 @@ function MenuComp(props) {
                     <ChildMenu {...item}
                                key={index}
                                gen_key={index}
-                               level={0}>
+                               level={0}
+                               setMobileMenu={props.setMobileMenu}>
                     </ChildMenu>
                 ))}
             </ul>
