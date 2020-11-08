@@ -37,7 +37,7 @@ function Header(props) {
                         </div>
                     }
 
-                    {/*Menu for responsive screen*/}
+                    {/*Menu open button for responsive screen*/}
                     <div className="hamburger-menu-container">
                         <div className="hamburger-menu"
                              onClick={clickMobileMenu}>

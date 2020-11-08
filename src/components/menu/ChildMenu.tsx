@@ -77,7 +77,7 @@ function ChildMenu(props) {
                 {isExpandable ? <input type="checkbox"
                                        onClick={(event) => handleLink(event, n_link)}
                                        id={'menu-check' + level + '.' + gen_key}>
-                </input> : null
+                    </input> : null
                 }
                 {/*Put to a div to avoid using onClick of <li>*/}
                 <div onClick={(event) => closeMenu(event, n_link)}>
@@ -95,7 +95,7 @@ function ChildMenu(props) {
                                                  level={level}
                                                  expand={isExpandable}
                                                  setMobileMenu={props.setMobileMenu}>
-                    </BoundChildMenu>
+                        </BoundChildMenu>
 
                     }
                 </div>
