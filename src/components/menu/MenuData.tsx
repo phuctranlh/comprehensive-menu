@@ -56,7 +56,17 @@ export const MenuData = [
                     },
                     {
                         name: "Drink",
-                        link: "/life/cooking/drink"
+                        link: "/life/cooking/drink",
+                        items: [
+                            {
+                                name: "Alcohol",
+                                link: "/life/cooking/drink/alcohol"
+                            },
+                            {
+                                name: "Juice",
+                                link: "/life/cooking/drink/juice"
+                            },
+                        ]
                     },
                 ]
             },
