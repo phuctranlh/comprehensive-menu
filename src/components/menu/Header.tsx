@@ -18,28 +18,28 @@ function Header(props) {
     return (
         <>
             <div className={'responsive-header'}>
-                <div className="header-container">
+                <div className={'header-container'}>
 
-                    <div className="logo-container">
+                    <div className={'logo-container'}>
                         <Link to={'/'} className={'navbar-logo'}>
-                            <div className="site-name">PHOOD TRAN</div>
+                            <div className={'site-name'}>PHOOD TRAN</div>
                             <i className={'fa fa-adjust'}></i>
                         </Link>
                     </div>
 
                     {
-                        (mobiMenu || window.innerWidth >= 960) && <div className="nav-btn">
+                        (mobiMenu || window.innerWidth >= 960) && <div className={'nav-btn'}>
                             <MenuComp setMobileMenu={setMobileMenu}></MenuComp>
-                            <div className="log-sign">
-                                <a href="#" className="btn transparent">Sign in</a>
-                                <a href="#" className="btn solid">Sign up</a>
+                            <div className={'log-sign'}>
+                                <a href="sign-in" className={'btn transparent'}>Sign in</a>
+                                <a href="sign-up" className={'btn solid'}>Sign up</a>
                             </div>
                         </div>
                     }
 
                     {/*Menu open button for responsive screen*/}
-                    <div className="hamburger-menu-container">
-                        <div className="hamburger-menu"
+                    <div className={'hamburger-menu-container'}>
+                        <div className={'hamburger-menu'}
                              onClick={clickMobileMenu}>
                             {mobiMenu ? <i className={'fa fa-times'}></i> : <i className={'fa fa-bars'}></i>}
                         </div>

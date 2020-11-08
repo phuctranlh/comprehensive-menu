@@ -84,7 +84,7 @@ function ChildMenu(props) {
                     <Link to={n_link}>
                         {name}
                         {isExpandable ? <label title="toggle menu" htmlFor={'menu-check' + level + '.' + gen_key}>
-                            <i className="fa fa-caret-down"></i>
+                            <i className={'fa fa-caret-down'}></i>
                         </label> : null}
 
 
